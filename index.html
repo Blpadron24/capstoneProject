@@ -4,26 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Davis Rewind</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <script src="script.js" defer></script>
+    <title>Davis Redo</title>
 </head>
 <body>
     <header>
-       <h1>Davis Rewind</h1>
+       <h1>Davis Redo</h1>
     </header>
 
     <main>
+        <!-- instructions button -->
         <section>
         <button id="instBttn">instructions</button>
         </section>
         
+        <!-- escape room instructions -->
         <section id="instructions" class="hidden">
         <h2>Instructions</h2>
         <p>Aye ballast tender yarr chantey ballast. Tales bow chandler gangplank yellow driver aye ensign. Pink aft down boom the topmast lanyard bucko hogshead run. Line timbers maroon sloop lugsail corsair shiver weigh mutiny pirate. Cat gar belaying her parrel swab. Parrel yawl line spanker gun cutlass mizzen roger line. Pounders maroon reef gun ipsum. Spot american fleet mizzen run swab mizzen tea. Gangway road splice deck topmast heave brace corsair lee. Quarterdeck starboard just topsail heave. Schooner lateen tails black arr down topmast brace hands. Lubber no fer yawl shiver timbers blow shrouds.
         </p>
         </section>
 
+        <!-- play button -->
         <section>
         <button id="playBttn">play!</button>
+        </section>
+
+        <!-- puzzle 1 -->
+        <section id="puzzle1">
+            <h1>Davis Redo</h1>
+
+            <div class="p1Left">
+                <h2>Puzzle 1/12: Crossroads</h2>
+                <img src="#" alt="crossword puzzle">
+            </div>
+
+            <div class="p1Right">
+                <button>hint</button>
+                <p>As you start your journey, you first hit a crossroads. To move forward along the right path, the guardian of the crossroads presents you with a puzzle to be solved. Enter the answers below.</p>
+                <div class="p1form">
+                    <form>
+                        <label for="d1Answer">Down 1:</label>
+                        <input type="text" id="d1Answer" required>
+                        <label for="d2Answer">Down 2:</label>
+                        <input type="text" id="d2Answer" required>
+                        <label for="a1Answer">Across 1:</label>
+                        <input type="text" id="a1Answer" required>
+                        <input type="submit" value="solve">
+                    </form>
+                    
+                </div>
+            </div>
         </section>
 
     </main>
