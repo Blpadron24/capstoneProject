@@ -5,48 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" />
-    <link href="styles.css" rel="stylesheet" />
+
+    <link href="styles.css" rel="stylesheet"/>
+
     <script src="script.js" defer></script>
     <title>Davis Redo</title>
 </head>
 <body>
     <header>
-       <h1>Davis Redo</h1>
-       <!-- hello this is santhoshi testing -->
-       <!-- hello! :] -->
+
+       <h2>Davis Redo</h2>
+
     </header>
 
-    <main>
-        <!-- instructions button -->
-        <section>
+    <!-- starting screen, can be an overlay -->
+    <section>
+        <h1>Davis Redo</h1>
         <button id="instBttn">instructions</button>
-        </section>
+        <button class="playBttn">play!</button>
+    </section>
+
+    <!-- the instruction section will also be an overlay, so we can have it not be in the main -->
+    <section id="instructions">
+        <p>Aye ballast tender yarr chantey ballast. Tales bow chandler gangplank yellow driver aye ensign. Pink aft down boom the topmast lanyard bucko hogshead run. Line timbers maroon sloop lugsail corsair shiver weigh mutiny pirate. Cat gar belaying her parrel swab. Parrel yawl line spanker gun cutlass mizzen roger line. Pounders maroon reef gun ipsum. Spot american fleet mizzen run swab mizzen tea. Gangway road splice deck topmast heave brace corsair lee. Quarterdeck starboard just topsail heave. Schooner lateen tails black arr down topmast brace hands. Lubber no fer yawl shiver timbers blow shrouds.</p>
         
-        <!-- escape room instructions -->
-        <section id="instructions" class="hidden">
-        <h2>Instructions</h2>
-        <p>Aye ballast tender yarr chantey ballast. Tales bow chandler gangplank yellow driver aye ensign. Pink aft down boom the topmast lanyard bucko hogshead run. Line timbers maroon sloop lugsail corsair shiver weigh mutiny pirate. Cat gar belaying her parrel swab. Parrel yawl line spanker gun cutlass mizzen roger line. Pounders maroon reef gun ipsum. Spot american fleet mizzen run swab mizzen tea. Gangway road splice deck topmast heave brace corsair lee. Quarterdeck starboard just topsail heave. Schooner lateen tails black arr down topmast brace hands. Lubber no fer yawl shiver timbers blow shrouds.
-        </p>
-        </section>
+        <button class="playBttn">play!</button>
+    </section>
 
-        <!-- play button -->
-        <section>
-        <button id="playBttn">play!</button>
-        </section>
-
+    <main>
         <!-- puzzle 1 -->
-        <section id="puzzle1" class="hidden">
-            <h1>Davis Redo</h1>
 
-            <div class="p1Left">
+        <section id="puzzle1">
+
+
+            <!-- left section -->
+            <div>
                 <h2>Puzzle 1/12: Crossroads</h2>
-                <img src="#" alt="crossword puzzle">
+                <!-- the box behind the div -->
+                <div>
+                    <img src="#" alt="crossword puzzle">
+                    <h3>Down</h3>
+                    <ul>
+                        <li>1. The trains in town travel on this.</li>
+                        <li>2. The name of the people to whom this land historically belonged.</li>
+                    </ul>
+                    <h3>Across</h3>
+                    <ul>
+                        <li>2. The name of the creek that runs through Davis.</li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="p1Right">
-                <button>hint</button>
-                <p>As you start your journey, you first hit a crossroads. To move forward along the right path, the guardian of the crossroads presents you with a puzzle to be solved. Enter the answers below.</p>
-                <div class="p1form">
+            <div>
+                <button class="hint">hint</button>
+                <p>Right at the start your journey, you hit a crossroad, and a hawk appears. The hawk tells you that in order to keep going, you need to answer three questions. It then asks you all the questions at once and disappears, leaving you to puzzle them through.</p>
+                <div id="p1form">
                     <form>
                         <label for="d1Answer">Down 1:</label>
                         <input type="text" id="d1Answer" required>
@@ -56,11 +69,111 @@
                         <input type="text" id="a1Answer" required>
                         <input type="submit" value="solve">
                     </form>
-                    
                 </div>
             </div>
         </section>
+        <!------------------------------------------------------------------------>
+        <!-- puzzle 2 -->
+        <section id="puzzle2">
 
+            <!-- left section -->   
+            <div>
+                <h2>Puzzle 2/12: Time</h2>
+                <!-- the box behind the div -->
+                <div>
+                    <p>Davis wast inc'rp'rat'd in 1917.  2 sc’re annum and one less than a decade past, the town wast did found.  what is yond date?</p>
+                    <p>Insuper, a decade past 1917, ‘t did get its nameth sh'rten'd, doing hence with a quarter of a score characters.  what wast the 'riginal nameth?</p>
+                </div>
+            </div>
+
+            <div>
+                <button class="hint">hint</button>
+                <p>The hawk tells you a rhyme that leaves you baffled. It then tells you that there are 2 answers, without which you cannot move forward. You see grooves forming in the soil in front of you, forming the rhymes that the hawk spoke.</p>
+                <div id="p2form">
+                    <form>
+                        <label for="ans1">Date:</label>
+                        <input type="text" id="ans1" required>
+                        <label for="ans2">Name:</label>
+                        <input type="text" id="ans2" required>
+                        <input type="submit" value="solve">
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!------------------------------------------------------------------------>
+        <!-- puzzle 3 -->
+        <section id="puzzle3">
+
+            <!-- left section -->   
+            <div>
+                <h2>Puzzle 3/12: Birds</h2>
+                <!-- the box behind the div -->
+                <div>
+                    <!-- connect the dots goes here -->
+                </div>
+            </div>
+
+            <div>
+                <button class="hint">hint</button>
+                <p>The hawk sits in front of you, eyes glimmering and head tilted. In front of the hawk is a scattered collection of pebbles. After some silence, the hawk tells you to identify shape what the pebbles form. You try to step forward, but there is something preventing you from moving.</p>
+                <div id="p3form">
+                    <form>
+                        <label for="bird">What bird shape is in front of the hawk?</label>
+                        <input type="text" id="bird" required>
+                        <input type="submit" value="solve">
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!------------------------------------------------------------------------>
+        <!-- puzzle 4 -->
+        <section id="puzzle4">
+
+            <!-- left section -->   
+            <div>
+                <h2>Puzzle 4/12: Pathways</h2>
+                <!-- the box behind the div -->
+                <div>
+                    <img alt="1914 map of Davisville, CA" src="#">
+                </div>
+            </div>
+
+            <div>
+                <button class="hint">hint</button>
+                <p>Ahead of you, you see a large number of paths going every which way. You try to move forward by picking a random path, but the paths scramble. The hawk appears again, and tells you that you need to focus on the town you started from before you continue. </p>
+                <div id="p3form">
+                    <form>
+                        <label for="home">Where is the town that started this journey?</label>
+                        <input type="text" id="home" required>
+                        <input type="submit" value="solve">
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!------------------------------------------------------------------------>
+        <!-- puzzle 5 -->
+        <section id="puzzle5">
+
+            <!-- left section -->   
+            <div>
+                <h2>Puzzle 5/12: Farmland</h2>
+                <!-- the box behind the div -->
+                <div>
+                </div>
+            </div>
+
+            <div>
+                <button class="hint">hint</button>
+                <p>Ahead of you, you see a large number of paths going every which way. You try to move forward by picking a random path, but the paths scramble. The hawk appears again, and tells you that you need to focus on the town you started from before you continue. </p>
+                <div id="p3form">
+                    <form>
+                        <label for="home">Where is the town that started this journey?</label>
+                        <input type="text" id="home" required>
+                        <input type="submit" value="solve">
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
 </body>
 </html>
