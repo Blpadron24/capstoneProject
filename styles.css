@@ -29,6 +29,9 @@ p{
     margin-bottom: 1em;
     line-height: 1.35em;
 }
+button, input[type=submit]{
+    cursor: pointer;
+}
 /* ------------------------------------------------------- */
 /* text styles */
 h1{
@@ -83,7 +86,6 @@ p, li{
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-    cursor: pointer;
     width: 200px;
 }
 #start > .playBttn{
@@ -91,7 +93,6 @@ p, li{
     align-items: center;
     margin-top: 150px;
     opacity: 0.9;
-    cursor: pointer;
 }
 #instructions > h2{
     font-size: 50px;
@@ -139,12 +140,53 @@ p, li{
 
 }
 /* ------------------------------------------------------- */
+/* FORM styles */
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 480px;
+}
+form > div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    gap: 30px;
+}
+form label{
+    font-size: 24px;
+    color:#424845;
+}
+form input[type=text]{
+    height: 30px;
+    width: 275px;
+    background-color: #597461;
+    border: 1px solid #3C4E41;
+    border-radius: 5px;
+}
+input[type=submit]{
+    background-color: #C3D6C9;
+    color: #2A302C;
+    font-size: 24px;
+    padding: 10px;
+    border: none;
+    border-radius: 60px;
+}
+#p3form input[type=text], #p4form input[type=text], #p5form input[type=text], #p6form input[type=text], #p9form input[type=text], #p10form input[type=text], #p11form input[type=text]{
+    width: 460px;
+}
+/* ------------------------------------------------------- */
 /* section general styles */
 main > section{
     display: flex;
-    margin: 40px 40px 0 40px;
-    height: 500px;
+    margin: 50px 30px 0 30px;
+    height: 600px;
     gap: 50px;
+}
+section h2{
+    margin-bottom: 40px;
 }
 main > section > div{
     flex: 1;
@@ -165,6 +207,15 @@ main > section > div:first-of-type > div{
     padding: 10px 60px;
     font-size: 20px;
     width: 180px;
+    align-self: flex-end;
+    margin-bottom: 20px;
+}
+section > div:last-of-type{
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    height: 480px;
+    justify-content: space-between;
 }
 /* ------------------------------------------------------- */
 /* section puzzle 1 styles */
@@ -190,10 +241,69 @@ main > section > div:first-of-type > div{
     list-style-type: none;
     font-size: 16px;
 }
-#puzzle1 div:last-of-type{
+#puzzle1 > div:first-of-type > div > div{
+    max-width: 340px;
+}
+/* ------------------------------------------------------- */
+/* section puzzle 2, puzzle 5, puzzle 7 styles */ 
+#puzzle2 > div:first-of-type > div, #puzzle5 > div:first-of-type div, #puzzle7 > div:first-of-type div, #puzzle10 > div:first-of-type > div{
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
-#puzzle1 .hint{
-    align-self: flex-end;
+#puzzle2 > div:first-of-type p, #puzzle5 > div:first-of-type p, #puzzle7 > div:first-of-type div p, #puzzle10 > div:first-of-type p{
+    font-size: 24px;
+    padding: 20px;
+    margin: 0;
+    color: #C3D6C9;
 }
+#puzzle5 > div:first-of-type p{
+    font-size: 16px;
+    padding: 8px 20px;
+}
+#puzzle7 > div >div:first-of-type > p{
+    text-align: center;
+}
+/* ------------------------------------------------------- */
+/* section puzzle 4 styles */ 
+#puzzle4 > div:first-of-type > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#puzzle4 img{
+    border-radius: 10px;
+}
+/* ------------------------------------------------------- */
+/* MORE section puzzle 7 styles */ 
+#puzzle7 .hint{
+    margin: 0;
+}
+#p7form > form{
+    width: 480px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin: 0;
+}
+#p7form > form > div{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-start;
+}
+#p7form > form > div > input[type=text]{
+    width: 230px;
+}
+#p7form > form > input[type=submit]{
+    width: 230px;
+    font-size: 16px;
+    height: 50px;
+    padding: 0 10px;
+    margin-top: 30px;
+}
+/* ------------------------------------------------------- */
+/* section puzzle 10 styles */
+#puzzle10 > div:first-of-type p{
+    text-align: center;
+} 

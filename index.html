@@ -43,7 +43,7 @@
                 <h2>Puzzle 1/12: Crossroads</h2>
                 <!-- the box behind the text -->
                 <div>
-                    <img src="#" alt="crossword puzzle" width="140" height="340">
+                    <img src="images/crossroads.svg" alt="crossword puzzle" width="140" height="340">
                     <div>
                         <h3>Down</h3>
                         <ul>
@@ -63,12 +63,18 @@
                 <p>You start down a dirt path, and you are immediately met with a crossroad, and a hawk appears. The hawk tells you that in order to keep going, you need to answer three questions. It then asks you all the questions at once and disappears, leaving you to puzzle them through.</p>
                 <div id="p1form">
                     <form>
-                        <label for="d1Answer">Down 1:</label>
-                        <input type="text" id="d1Answer" required>
-                        <label for="d2Answer">Down 2:</label>
-                        <input type="text" id="d2Answer" required>
-                        <label for="a1Answer">Across 1:</label>
-                        <input type="text" id="a1Answer" required>
+                        <div>
+                            <label for="d1Answer">Down 1:</label>
+                            <input type="text" id="d1Answer" required>
+                        </div>
+                        <div>
+                            <label for="d2Answer">Down 2:</label>
+                            <input type="text" id="d2Answer" required>
+                        </div>
+                        <div>
+                            <label for="a1Answer">Across 1:</label>
+                            <input type="text" id="a1Answer" required>                            
+                        </div>
                         <input type="submit" value="continue down the path">
                     </form>
                 </div>
@@ -93,10 +99,14 @@
                 <p>The hawk tells you a rhyme that leaves you baffled. It then tells you that there are 2 answers, without which you cannot move forward. You see grooves forming in the soil in front of you, forming the rhymes that the hawk spoke.</p>
                 <div id="p2form">
                     <form>
-                        <label for="ans1">Date:</label>
-                        <input type="text" id="ans1" required>
-                        <label for="ans2">Name:</label>
-                        <input type="text" id="ans2" required>
+                        <div>
+                            <label for="ans1">Date:</label>
+                            <input type="text" id="ans1" required>
+                        </div>
+                        <div>
+                            <label for="ans2">Name:</label>
+                            <input type="text" id="ans2" required>
+                        </div>
                         <input type="submit" value="continue down the path">
                     </form>
                 </div>
@@ -136,7 +146,7 @@
                 <h2>Puzzle 4/12: Pathways</h2>
                 <!-- the box behind the text -->
                 <div>
-                    <img alt="1914 map of Davisville, CA" src="#">
+                    <img alt="1914 map of Davisville, CA" src="images/map.jpg" width="500">
                 </div>
             </div>
 
@@ -175,7 +185,7 @@
                 <p>After a while, the hawk appears again. You stop. In the space between you and the hawk, a tomato, a grape, an almond, a walnut, a rice grain, and a sunflower appear in a pile. The hawk tells you, "Arrange the plants as I tell you. Once you position them all correctly, I will permit you to continue in your journey".</p>
                 <div id="p5form">
                     <form>
-                        <label for="plant">List the plants in the correct order. Start at the northwest corner and go clockwise (without spaces).</label>
+                        <label for="plant">List the plants in the correct order. Start at the northwest corner and go clockwise (without spaces or commas).</label>
                         <input type="text" id="plant" required>
                         <input type="submit" value="continue down the path">
                     </form>
@@ -199,9 +209,13 @@
                 <button class="hint">hint</button>
                 <p>The path you're on has been changing from dirt to paved. You have even seen lampposts. The hawk, now slightly bigger, appears in front you and challenges you to a game of alphabet guessing.</p>
                 <!-- other parts(?) of the hangman game here -->
-                <form>
-                    <input type="submit" value="continue down the path">
-                </form>
+                <div id="p6form">
+                    <form>
+                        <label for="Gphase">What is the phrase?</label>
+                        <input type="text" id="Gphase" required>
+                        <input type="submit" value="continue down the path">
+                    </form>
+                </div>
             </div>
         </section>
         <!------------------------------------------------------------------------>
@@ -223,20 +237,32 @@
 
             <div>
                 <button class="hint">hint</button>
-                <p>The undergrowth around you has started to thin out. The hawk shows it's presence, but this time it has a scroll in it's talons. It dropped the scroll in your outstretched palm, croaks out, "Solve this", and flies away again. In the scroll is a list of symbols, seemingly spelling out words and phrases.</p>
-                <form>
-                    <label for="ph1">Phrase 1:</label>
-                    <input type="text" id="ph1" required>
-                    <label for="ph2">Phrase 2:</label>
-                    <input type="text" id="ph2" required>
-                    <label for="wd1">Word 1:</label>
-                    <input type="text" id="wd1" required>
-                    <label for="ph3">Phrase 3:</label>
-                    <input type="text" id="ph3" required>
-                    <label for="wd2">Word 2:</label>
-                    <input type="text" id="wd2" required>
-                    <input type="submit" value="continue down the path">
-                </form>
+                <p>The undergrowth around you has started to thin out. The hawk returns with a scroll in its talons. It dropped the scroll in your outstretched palm and croaks out, "Solve this". In the scroll is a list of symbols, seemingly spelling out words and phrases.</p>
+                <div id="p7form">
+                    <form>
+                        <div>
+                            <label for="ph1">Phrase 1:</label>
+                            <input type="text" id="ph1" required>
+                        </div>
+                        <div>
+                            <label for="ph2">Phrase 2:</label>
+                            <input type="text" id="ph2" required>
+                        </div>
+                        <div>
+                            <label for="wd1">Word 1:</label>
+                            <input type="text" id="wd1" required>
+                        </div>
+                        <div>
+                            <label for="ph3">Phrase 3:</label>
+                            <input type="text" id="ph3" required>
+                        </div>
+                        <div>
+                            <label for="wd2">Word 2:</label>
+                            <input type="text" id="wd2" required>
+                        </div>
+                        <input type="submit" value="continue down the path">
+                    </form>
+                </div>
             </div>
         </section>
         <!------------------------------------------------------------------------>
@@ -257,9 +283,6 @@
                 <p>The paved path has the occasional cobblestone. The hawk drops in front of you a scroll and a curious writing utensil. While you gather what it dropped, it stares at you. "Sit, and draw childlike joy." Taken aback, you look at the hawk. But the hawk and the path in front of you has gone.</p>
                 <!-- what do we want here? a timer? -->
                 <!-- 30s timer -->
-                <form>
-                    <input type="submit" value="next">
-                </form>
             </div>
         </section>
         <!------------------------------------------------------------------------>
@@ -278,7 +301,7 @@
             <div>
                 <button class="hint">hint</button>
                 <p>You stop walking because a plant wall blocks your way. The hawk lands on your shoulder and tells you to collect all the tomatoes. You reach out to grab one, and it disappears in your hand. The hawk screeches, and tells you to count as you collect to prevent them disappears.</p>
-                <form>
+                <form id="p9form">
                     <label for="tomato">How many tomatoes are in the image to your left?</label>
                     <input type="text" id="tomato" required>
                     <input type="submit" value="continue down the path">
@@ -301,7 +324,7 @@
             <div>
                 <button class="hint">hint</button>
                 <p>The cobblestones are more common now. The hawk swoops in front of you, and you feel something fall on your head. A scroll lies behind you, with a nonsensical phrase on it. Perched on a branch nearby, the hawk tells you to tell it what the phrase it.</p>
-                <form>
+                <form id="p10form">
                     <label for="water">What is the phrase?</label>
                     <input type="text" id="water" required>
                     <input type="submit" value="continue down the path">
@@ -324,7 +347,7 @@
             <div>
                 <button class="hint">hint</button>
                 <p>The cobblestones have some color. You trip over one, and find yourself in the center of a town , with a map in your hand. Circled is a building. You follow the directions and find the building. The hawk appears and you freeze. It asks you, "What is the name of this street?"</p>
-                <form>
+                <form id="p11form">
                     <label for="hallans">Where is city hall located?</label>
                     <input type="text" id="hallans" required>
                     <input type="submit" value="continue down the path">
@@ -338,13 +361,17 @@
             <!-- left section -->   
             <div>
                 <h2>Puzzle 12/12: Memory</h2>
-                <button class="hint">hint</button>
+                <div>
+                    <!-- card memory game here -->
+                </div>
             </div>
 
-            <p>You find yourself seated at a tavern table. There's cards face-down on the table, and you see 10 of the hawk's face staring at you, almost following you.</p>
-
-            <div>
-                <!-- card memory game here -->
+            <div>                
+                <button class="hint">hint</button>
+                <p>You find yourself seated at a tavern table. There's cards face-down on the table, and you see 10 of the hawk's face staring at you, almost following you.</p>
+                <form>
+                    <input type="submit" value="end of the path">
+                </form>
             </div>
         </section>
     </main>
