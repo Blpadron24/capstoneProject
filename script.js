@@ -1,5 +1,43 @@
 (function(){
     'use strict';
+
+    // <-------------------------- moving------------------------>
+    let layerCounter = 0;
+    // get all the buttons with submit type
+    const allBttns = document.querySelectorAll('.bttn');
+    console.log(allBttns);
+
+    //loop through each button in the array of buttons...
+    allBttns.forEach( eachBttn => {
+
+        // Add an event listenter to each button
+        eachBttn.addEventListener('click', event => {
+
+            event.preventDefault();
+            let thisBttnNumber = Number(event.target.id.substring(1, event.target.id.length));
+
+            console.log(thisBttnNumber);
+
+            layerCounter = thisBttnNumber+1;
+
+            console.log(layerCounter);
+
+            const nextLayer = document.querySelector(`#puzzle${layerCounter}`);
+
+            const prevLayer = document.querySelector(`#puzzle${thisBttnNumber}`);
+            
+            nextLayer.style.zIndex = layerCounter;
+
+            nextLayer.className = 'layer showing';
+
+            nextLayer.style.backgroundImage = "url(images/newspapers.jpeg)";
+
+            nextLayer.addEventListener("transitionend", () => {
+                prevLayer.removeAttribute('style');
+                prevLayer.className = 'layer hidden';
+              }, { once: true });
+        } );
+    } );
     //<-------------------------- puzzle 1 script------------------------>
     function f1CheckAnswers(){
         var userAnswer1 = document.getElementById("d1Answer").value;
