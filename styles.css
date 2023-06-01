@@ -289,7 +289,18 @@ section > div:last-of-type{
     border-radius: 10px;
 }
 /* ------------------------------------------------------- */
-/* MORE section puzzle 7 styles */ 
+/* section puzzle 6 styles */ 
+#puzzle5 > div:first-of-type > div > img{
+    margin: auto;
+}
+#puzzle5 > div:first-of-type > div > p{
+    font-size: 48px;
+    text-align: center;
+    color:#C3D6C9;
+    margin: 20px 0;
+}
+/* ------------------------------------------------------- */
+/*  section puzzle 7 styles */ 
 #puzzle6 .hint{
     margin: 0;
 }
