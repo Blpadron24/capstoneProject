@@ -5,9 +5,9 @@
         var userAnswer1 = document.getElementById("d1Answer").value;
         var userAnswer2 = document.getElementById("d2Answer").value;
         var userAnswer3 = document.getElementById("a1Answer").value;
-        const d1Answer = 'a';
-        const d2Answer = 'b';
-        const a1Answer = 'c';
+        const d1Answer = 'Railroad';
+        const d2Answer = 'Patwin';
+        const a1Answer = 'Putah';
     
         if (userAnswer1.length == 0 || userAnswer2.length == 0 || userAnswer3==0) {
             alert("You must enter an answer to continue...");
