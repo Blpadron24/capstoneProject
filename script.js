@@ -1,36 +1,23 @@
 (function(){
     'use strict';
 
-    // <-------------------------- moving------------------------>
+    //-----------------one puzzle to the next------------------------
     let layerCounter = 0;
-    // get all the buttons with submit type
     const allBttns = document.querySelectorAll('.bttn');
-    console.log(allBttns);
 
-    //loop through each button in the array of buttons...
     allBttns.forEach( eachBttn => {
 
-        // Add an event listenter to each button
         eachBttn.addEventListener('click', event => {
 
             event.preventDefault();
             let thisBttnNumber = Number(event.target.id.substring(1, event.target.id.length));
 
-            console.log(thisBttnNumber);
-
-            layerCounter = thisBttnNumber+1;
-
-            console.log(layerCounter);
-
+            layerCounter = thisBttnNumber;
             const nextLayer = document.querySelector(`#puzzle${layerCounter}`);
-
             const prevLayer = document.querySelector(`#puzzle${thisBttnNumber}`);
             
             nextLayer.style.zIndex = layerCounter;
-
             nextLayer.className = 'layer showing';
-
-            nextLayer.style.backgroundImage = "url(images/newspapers.jpeg)";
 
             nextLayer.addEventListener("transitionend", () => {
                 prevLayer.removeAttribute('style');
@@ -38,14 +25,15 @@
               }, { once: true });
         } );
     } );
+
     //<-------------------------- puzzle 1 script------------------------>
     function f1CheckAnswers(){
-        var userAnswer1 = document.getElementById("d1Answer").value;
-        var userAnswer2 = document.getElementById("d2Answer").value;
-        var userAnswer3 = document.getElementById("a1Answer").value;
-        const d1Answer = 'a';
-        const d2Answer = 'b';
-        const a1Answer = 'c';
+        var userAnswer1 = document.getElementById("d1Answer").value.toLowerCase();
+        var userAnswer2 = document.getElementById("d2Answer").value.toLowerCase();
+        var userAnswer3 = document.getElementById("a1Answer").value.toLowerCase();
+        const d1Answer = 'railroad';
+        const d2Answer = 'patwin';
+        const a1Answer = 'putah';
     
         if (userAnswer1.length == 0 || userAnswer2.length == 0 || userAnswer3==0) {
             alert("You must enter an answer to continue...");
@@ -54,7 +42,9 @@
         if (userAnswer1 === d1Answer || userAnswer2 === d2Answer || userAnswer3 === a1Answer){
             alert("Correct!");
             console.log('t1');
-        }else{
+            // overlay with the seal pop up
+        }
+        else{
             alert("Try again!");
             console.log("f1");
         }
