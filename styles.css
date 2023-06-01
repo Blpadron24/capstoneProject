@@ -10,11 +10,25 @@ body{
 }
 /* ------------------------------------------------------- */
 /* general */
-.hidden{
-    visibility: hidden;
+main{
+    position: relative;
 }
-.show{
+.layer {
+    position: absolute;
+    width: 96%;
+    transition: opacity 1s;
+    top: 0;
+    left: 0;
+    background-color: #c3d6c9;
+}
+.showing {
     visibility: visible;
+    opacity: 1;
+}
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+    display: none;
 }
 h1, h2, ul, li{
     margin: 0;
@@ -219,64 +233,75 @@ section > div:last-of-type{
 }
 /* ------------------------------------------------------- */
 /* section puzzle 1 styles */
-#puzzle1 > div:first-of-type > div{
+#puzzle0 > div:first-of-type > div{
     display: flex;
     padding: 20px;
 }
-#puzzle1 img{
+#puzzle0 img{
     margin: 20px 0 20px 40px;
 }
-#puzzle1 h3{
+#puzzle0 h3{
     color:#CADBCF;
     font-size: 24px;
 }
-#puzzle1 h3:last-of-type{
+#puzzle0 h3:last-of-type{
     margin-top: 0;
 }
-#puzzle1 ul:first-of-type{
+#puzzle0 ul:first-of-type{
     margin-bottom: 100px;
 }
-#puzzle1 li{
+#puzzle0 li{
     color: #CADBCF;
     list-style-type: none;
     font-size: 16px;
 }
-#puzzle1 > div:first-of-type > div > div{
+#puzzle0 > div:first-of-type > div > div{
     max-width: 340px;
 }
 /* ------------------------------------------------------- */
 /* section puzzle 2, puzzle 5, puzzle 7 styles */ 
-#puzzle2 > div:first-of-type > div, #puzzle5 > div:first-of-type div, #puzzle7 > div:first-of-type div, #puzzle10 > div:first-of-type > div{
+#puzzle1 > div:first-of-type > div, #puzzle4 > div:first-of-type div, #puzzle6 > div:first-of-type div, #puzzle9 > div:first-of-type > div{
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-#puzzle2 > div:first-of-type p, #puzzle5 > div:first-of-type p, #puzzle7 > div:first-of-type div p, #puzzle10 > div:first-of-type p{
+#puzzle1 > div:first-of-type p, #puzzle4 > div:first-of-type p, #puzzle6 > div:first-of-type div p, #puzzle9 > div:first-of-type p{
     font-size: 24px;
     padding: 20px;
     margin: 0;
     color: #C3D6C9;
 }
-#puzzle5 > div:first-of-type p{
+#puzzle4 > div:first-of-type p{
     font-size: 16px;
     padding: 8px 20px;
 }
-#puzzle7 > div >div:first-of-type > p{
+#puzzle6 > div >div:first-of-type > p{
     text-align: center;
 }
 /* ------------------------------------------------------- */
 /* section puzzle 4 styles */ 
-#puzzle4 > div:first-of-type > div{
+#puzzle3 > div:first-of-type > div{
     display: flex;
     align-items: center;
     justify-content: center;
 }
-#puzzle4 img{
+#puzzle3 img{
     border-radius: 10px;
 }
 /* ------------------------------------------------------- */
-/* MORE section puzzle 7 styles */ 
-#puzzle7 .hint{
+/* section puzzle 6 styles */ 
+#puzzle5 > div:first-of-type > div > img{
+    margin: auto;
+}
+#puzzle5 > div:first-of-type > div > p{
+    font-size: 48px;
+    text-align: center;
+    color:#C3D6C9;
+    margin: 20px 0;
+}
+/* ------------------------------------------------------- */
+/*  section puzzle 7 styles */ 
+#puzzle6 .hint{
     margin: 0;
 }
 #p7form > form{
@@ -304,6 +329,6 @@ section > div:last-of-type{
 }
 /* ------------------------------------------------------- */
 /* section puzzle 10 styles */
-#puzzle10 > div:first-of-type p{
+#puzzle9 > div:first-of-type p{
     text-align: center;
 } 
