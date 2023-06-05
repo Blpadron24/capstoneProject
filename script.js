@@ -1,5 +1,25 @@
 (function(){
     'use strict';
+    //-----------------js for home screen & instructions------------------------
+    document.getElementById("playBttn").addEventListener("click", function(event){
+        event.preventDefault();
+        document.getElementById("start").className = "hidden";
+        document.getElementById("puzzle0").className = "layer showing";
+    });
+
+    document.getElementById("instBttn").addEventListener("click", function(event){
+        event.preventDefault();
+        document.getElementById("instructions").className = "showing";
+    });
+
+    document.getElementById("playBttn2").addEventListener("click", function(event){
+        event.preventDefault();
+        document.getElementById("start").className = "hidden";
+        document.getElementById("instructions").className = "hidden";
+        document.getElementById("puzzle0").className = "layer showing";
+    });
+
+
 
     //-----------------one puzzle to the next------------------------
     let layerCounter = 0;
