@@ -121,12 +121,12 @@ a{
     background-color: #c3d6c9e3;
     border: #9FC0AA solid 5px;
     border-radius: 20px;
-    overflow-y: scroll;
+    font-size: 20px;
     width: 1000px;
-    height: 450px;
+    height: 300px;
     padding: 20px;
     margin-top: 30px;
-    scrollbar-width: 10px;
+    margin-bottom: 60px;
 }
 #instructions > .playBttn{
     justify-content: center;
