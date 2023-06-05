@@ -76,6 +76,11 @@ h3{
 p, li{
     color: #424845;
 }
+
+a{
+    text-decoration: none;
+    color: #6F686E;
+}
 /* ------------------------------------------------------- */
 /* start screen, instruction screen styles */
 #start, #instructions{
