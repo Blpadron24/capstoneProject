@@ -23,47 +23,49 @@
 
 
     //-----------------one puzzle to the next------------------------
-    // let layerCounter = 0;
-    // const allBttns = document.querySelectorAll('.bttn');
+    let layerCounter = 0;
+    const allBttns = document.querySelectorAll('.bttn');
+    const body = document.querySelector("body");
 
-    // allBttns.forEach( eachBttn => {
+    allBttns.forEach( eachBttn => {
 
-    //     eachBttn.addEventListener('click', event => {
+        eachBttn.addEventListener('click', event => {
 
-    //         event.preventDefault();
-    //         let thisBttnNumber = Number(event.target.id.substring(1, event.target.id.length));
+            event.preventDefault();
+            if(event.target.id === "s0"){
+                event.target.removeAttribute('style');
+                f1CheckAnswers();                
+            }
+            if(event.target.id === "s1"){
+                event.target.removeAttribute('style');
+                f2CheckAnswers();                
+            }
+            if(event.target.id === "s2"){
+                event.target.removeAttribute('style');
+                f3CheckAnswers();                
+            }
+            let thisBttnNumber = Number(event.target.id.substring(1, event.target.id.length));
 
-    //         layerCounter = thisBttnNumber;
-    //         const nextLayer = document.querySelector(`#puzzle${layerCounter}`);
-    //         const prevLayer = document.querySelector(`#puzzle${thisBttnNumber}`);
+            layerCounter = thisBttnNumber+1;
+
+            const nextLayer = document.querySelector(`#puzzle${layerCounter}`);
+            const prevLayer = document.querySelector(`#puzzle${thisBttnNumber}`);
             
-    //         nextLayer.style.zIndex = layerCounter;
-    //         nextLayer.className = 'layer showing';
+            nextLayer.style.zIndex = layerCounter;
+            nextLayer.className = 'layer showing';
 
-    //         nextLayer.addEventListener("transitionend", () => {
-    //             prevLayer.removeAttribute('style');
-    //             prevLayer.className = 'layer hidden';
-    //           }, { once: true });
-    //     } );
-    // } );
+        } );
+    } );
 
     //<-------------------------- puzzle 1 script------------------------>
-    // function f1CheckAnswers(){
-        let layerCounter = 0;
-        
-        if(layerCounter === 0){
-            
-            const allBttns = document.querySelectorAll('.bttn');
-            
-            allBttns.forEach( eachBttn => {
-            eachBttn.addEventListener('click', event => {   
-                event.preventDefault();
-                var userAnswer1 = document.getElementById("d1Answer").value.toLowerCase();
-                var userAnswer2 = document.getElementById("d2Answer").value.toLowerCase();
-                var userAnswer3 = document.getElementById("a1Answer").value.toLowerCase();
-                const d1Answer = 'railroad';
-                const d2Answer = 'patwin';
-                const a1Answer = 'putah';
+    function f1CheckAnswers(){
+
+        var userAnswer1 = document.getElementById("d1Answer").value.toLowerCase();
+        var userAnswer2 = document.getElementById("d2Answer").value.toLowerCase();
+        var userAnswer3 = document.getElementById("a1Answer").value.toLowerCase();
+        const d1Answer = 'railroad';
+        const d2Answer = 'patwin';
+        const a1Answer = 'putah';
 
     
         if (userAnswer1.length == 0 || userAnswer2.length == 0 || userAnswer3==0) {
@@ -71,42 +73,22 @@
             return false;
             }
         if (userAnswer1 === d1Answer || userAnswer2 === d2Answer || userAnswer3 === a1Answer){
-            alert("Correct!");
-            console.log('t1');
-            event.preventDefault();
-            let thisBttnNumber = Number(event.target.id.substring(1, event.target.id.length));
+            // alert("Correct!");
+            document.getElementById("seal_container").className = "showing";
+                document.getElementById("seal").src = seals[0];
 
-            layerCounter = thisBttnNumber;
-            const nextLayer = document.querySelector(`#puzzle${layerCounter}`);
-            const prevLayer = document.querySelector(`#puzzle${thisBttnNumber}`);
-            
-            nextLayer.style.zIndex = layerCounter;
-            nextLayer.className = 'layer showing';
-
-            nextLayer.addEventListener("transitionend", () => {
-                prevLayer.removeAttribute('style');
-                prevLayer.className = 'layer hidden';
-              }, { once: true });
-
-              console.log(layerCounter);
-            // overlay with the seal pop up
+            setTimeout(function(){
+                document.getElementById("seal_container").className = "hidden";
+                body.style.backgroundImage = "url(images/seal/newspaper.png)";
+            },3000);
         }
         else{
             alert("Try again!");
             console.log("f1");
         }
-    } );
- } );
-    }else if (layerCounter !== 0){
-        console.log("test");
+
     }
-console.log(layerCounter);
-// }
-    // document.getElementById("s1").addEventListener("click", function(event){
-    //     event.preventDefault();
-    //     f1CheckAnswers();
-    //   });
-    
+
       //<-------------------------- puzzle 2 script------------------------>
       function f2CheckAnswers(){
         var userAnswer1 = document.getElementById("ans1").value;
@@ -119,8 +101,14 @@ console.log(layerCounter);
             return false;
             }
         if (userAnswer1 === ans1 || userAnswer2 === ans2){
-            alert("Correct!");
             console.log('t2');
+            document.getElementById("seal_container").className = "showing";
+                document.getElementById("seal").src = seals[0];
+
+            setTimeout(function(){
+                document.getElementById("seal_container").className = "hidden";
+                body.style.backgroundImage = "url(images/seal/newspaper.png)";
+            },3000);
         }else{
             alert("Try again!");
             console.log("f2");
@@ -133,27 +121,28 @@ console.log(layerCounter);
       });
     
       //<-------------------------- puzzle 3 script------------------------>
-    //   function f3CheckAnswers(){
-    //     var userAnswer1 = document.getElementById("bird").value;
-    //     const bird = 'a';
+      function f3CheckAnswers(){
+        var userAnswer1 = document.getElementById("bird").value;
+        const bird = 'a';
         
-    //     if (userAnswer1.length == 0) {
-    //         alert("You must enter an answer to continue...");
-    //         return false;
-    //         }
-    //     if (userAnswer1 === bird){
-    //         alert("Correct!");
-    //         console.log('t3');
-    //     }else{
-    //         alert("Try again!");
-    //         console.log("f3");
-    //     }
-    // }
-    
-    // document.getElementById("s3").addEventListener("click", function(event){
-    //     event.preventDefault();
-    //     f3CheckAnswers();
-    //   });
+        if (userAnswer1.length == 0) {
+            alert("You must enter an answer to continue...");
+            return false;
+            }
+        if (userAnswer1 === bird){
+            console.log('t3');
+            document.getElementById("seal_container").className = "showing";
+                document.getElementById("seal").src = seals[0];
+
+            setTimeout(function(){
+                document.getElementById("seal_container").className = "hidden";
+                body.style.backgroundImage = "url(images/seal/newspaper.png)";
+            },3000);
+        }else{
+            alert("Try again!");
+            console.log("f3");
+        }
+    }
     
     //     //<-------------------------- puzzle 4 script------------------------>
     //     function f4CheckAnswers(){

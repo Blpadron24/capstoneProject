@@ -19,7 +19,6 @@ main{
     transition: opacity 1s;
     top: 0;
     left: 0;
-    background-color: #c3d6c9;
 }
 .showing {
     visibility: visible;
@@ -121,12 +120,12 @@ a{
     background-color: #c3d6c9e3;
     border: #9FC0AA solid 5px;
     border-radius: 20px;
-    overflow-y: scroll;
+    font-size: 20px;
     width: 1000px;
-    height: 450px;
+    height: 300px;
     padding: 20px;
     margin-top: 30px;
-    scrollbar-width: 10px;
+    margin-bottom: 60px;
 }
 #instructions > .playBttn{
     justify-content: center;
@@ -201,8 +200,12 @@ input[type=submit]{
 main > section{
     display: flex;
     margin: 50px 30px 0 30px;
-    height: 600px;
+    height: 540px;
     gap: 50px;
+    background-color: #C3D6C9;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 20px;
 }
 section h2{
     margin-bottom: 40px;
@@ -236,6 +239,20 @@ section > div:last-of-type{
     height: 480px;
     justify-content: space-between;
 }
+/* ------------------------------------------------------- */
+/* puzzle general styles */
+#puzzle0{ z-index: 0;}
+#puzzle1{ z-index: -1;}
+#puzzle2{ z-index: -2;}
+#puzzle3{ z-index: -3;}
+#puzzle4{ z-index: -4;}
+#puzzle5{ z-index: -5;}
+#puzzle6{ z-index: -6;}
+#puzzle7{ z-index: -7;}
+#puzzle8{ z-index: -8;}
+#puzzle9{ z-index: -9;}
+#puzzle10{ z-index: -10;}
+#puzzle11{ z-index: -11;}
 /* ------------------------------------------------------- */
 /* section puzzle 1 styles */
 #puzzle0 > div:first-of-type > div{
@@ -337,3 +354,12 @@ section > div:last-of-type{
 #puzzle9 > div:first-of-type p{
     text-align: center;
 } 
+/* ------------------------------------------------------- */
+/* seal pop-up styles */
+#seal_container{
+    position: relative;
+    z-index: 200;
+    background-color: #0E371C;
+    width: 100vw;
+    height: 100vh;
+}
