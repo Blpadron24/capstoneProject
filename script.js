@@ -93,8 +93,8 @@
       function f2CheckAnswers(){
         var userAnswer1 = document.getElementById("ans1").value;
         var userAnswer2 = document.getElementById("ans2").value;
-        const ans1 = 'a';
-        const ans2 = 'b';
+        const ans1 = '1868';
+        const ans2 = 'Davisville';
        
         if (userAnswer1.length == 0 || userAnswer2.length == 0) {
             alert("You must enter an answer to continue...");
