@@ -79,7 +79,7 @@
 
             setTimeout(function(){
                 document.getElementById("seal_container").className = "hidden";
-                body.style.backgroundImage = "url(images/seal/newspaper.png)";
+                body.style.backgroundImage = "url(images/sealPics/sealP1.png)";
             },3000);
         }
         else{
@@ -107,7 +107,7 @@
 
             setTimeout(function(){
                 document.getElementById("seal_container").className = "hidden";
-                body.style.backgroundImage = "url(images/seal/newspaper.png)";
+                body.style.backgroundImage = "url(images/sealPics/sealP2.png)";
             },3000);
         }else{
             alert("Try again!");
@@ -136,7 +136,7 @@
 
             setTimeout(function(){
                 document.getElementById("seal_container").className = "hidden";
-                body.style.backgroundImage = "url(images/seal/newspaper.png)";
+                body.style.backgroundImage = "url(images/sealPics/sealP3.png)";
             },3000);
         }else{
             alert("Try again!");
