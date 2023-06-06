@@ -26,6 +26,8 @@
     let layerCounter = 0;
     const allBttns = document.querySelectorAll('.bttn');
     const body = document.querySelector("body");
+    const seals = ["images/sealPics/seal.png", "images/sealPics/sealP1.png", "images/sealPics/sealP2.png", "images/sealPics/sealP3.png", "images/sealPics/sealP4.png", "images/sealPics/sealP5.png", "images/sealPics/sealP6.png", "images/sealPics/sealP7.png", "images/sealPics/sealP8.png", "images/sealPics/sealP9.png", "images/sealPics/sealP10.png", "images/sealPics/sealP11.png", "images/sealPics/sealP12.png"];
+
 
     allBttns.forEach( eachBttn => {
 
@@ -72,14 +74,14 @@
             alert("You must enter an answer to continue...");
             return false;
             }
-        if (userAnswer1 === d1Answer || userAnswer2 === d2Answer || userAnswer3 === a1Answer){
+        else if (userAnswer1 === d1Answer || userAnswer2 === d2Answer || userAnswer3 === a1Answer){
             // alert("Correct!");
             document.getElementById("seal_container").className = "showing";
-                document.getElementById("seal").src = seals[0];
+                document.getElementById("seal").src = seals[1];
 
             setTimeout(function(){
                 document.getElementById("seal_container").className = "hidden";
-                body.style.backgroundImage = "url(images/sealPics/sealP1.png)";
+                body.style.backgroundImage = "url(images/bg_2.png)";
             },3000);
         }
         else{
