@@ -1,3 +1,6 @@
+*{
+    transition: all 0.5s;
+}
 /* ------------------------------------------------------- */
 /* body */
 body{
@@ -7,6 +10,8 @@ body{
     scroll-behavior: smooth;
     background: #C3D6C9;
     margin: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 /* ------------------------------------------------------- */
 /* general */
@@ -88,7 +93,7 @@ a{
     position: fixed;
     top: 0;
     left: 0;
-    background-image: url(images/bg_2.png);
+    background-image: url(images/bg/bg_0.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     box-sizing: border-box;
@@ -192,7 +197,7 @@ input[type=submit]{
     border: none;
     border-radius: 60px;
 }
-#p3form input[type=text], #p4form input[type=text], #p5form input[type=text], #p6form input[type=text], #p9form input[type=text], #p10form input[type=text], #p11form input[type=text]{
+#p3form input[type=text], #p4form input[type=text], #p5form input[type=text], #p6form input[type=text], #f9 input[type=text], #f10 input[type=text], #f11 input[type=text]{
     width: 460px;
 }
 /* ------------------------------------------------------- */
@@ -202,7 +207,7 @@ main > section{
     margin: 50px 30px 0 30px;
     height: 540px;
     gap: 50px;
-    background-color: #C3D6C9;
+    background-color: #c3d6c99f;
     box-sizing: border-box;
     border-radius: 10px;
     padding: 20px;
@@ -239,20 +244,6 @@ section > div:last-of-type{
     height: 480px;
     justify-content: space-between;
 }
-/* ------------------------------------------------------- */
-/* puzzle general styles */
-#puzzle0{ z-index: 0;}
-#puzzle1{ z-index: -1;}
-#puzzle2{ z-index: -2;}
-#puzzle3{ z-index: -3;}
-#puzzle4{ z-index: -4;}
-#puzzle5{ z-index: -5;}
-#puzzle6{ z-index: -6;}
-#puzzle7{ z-index: -7;}
-#puzzle8{ z-index: -8;}
-#puzzle9{ z-index: -9;}
-#puzzle10{ z-index: -10;}
-#puzzle11{ z-index: -11;}
 /* ------------------------------------------------------- */
 /* section puzzle 1 styles */
 #puzzle0 > div:first-of-type > div{
@@ -357,9 +348,25 @@ section > div:last-of-type{
 /* ------------------------------------------------------- */
 /* seal pop-up styles */
 #seal_container{
-    position: relative;
-    z-index: 200;
-    background-color: #0E371C;
-    width: 100vw;
-    height: 100vh;
+    background-color: #c3d6c9e3;
+    border: #9FC0AA solid 5px;
+    border-radius: 20px;
+    padding: 20px;
+    display: block;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#seal_container h2{
+    text-align: center;
+    margin-bottom: 0;
+}
+#seal{
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#seal_container p{
+    margin-left: 100px;
+    margin-right: 100px;
 }
