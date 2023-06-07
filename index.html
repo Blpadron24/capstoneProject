@@ -26,14 +26,18 @@
 
     <section id="instructions" class="hidden">
         <h2>Davis Redo</h2>
-        <p>Welcome, wanderer and seeker of knowledge!<br><br>During this portion of your travels, you walk through sparse paths, guided by a hawk. The hawk not only lights your way, but also brings you challenges to solve. These challenges gift you with the knowledge of the town you once came from and are now trying to return to. <br><br>Information:<br><br>Davis Rewind is an online escape room themed around the seal of the town of Davis, California. There are a total of 12 puzzles, after each of which you get rewarded with a slice of the seal as well as some knowledge about the town. </p>
-        
+        <div id="i_cont">
+            <h3>Welcome, wanderer and seeker of knowledge!</h3>
+            <p>During this portion of your travels, you walk through sparse paths, guided by a hawk. The hawk not only lights your way, but also brings you challenges to solve. These challenges gift you with the knowledge of the town you once came from and are now trying to return to.</p>
+            <h3>Information:</h3>
+            <p>Davis Rewind is an online escape room themed around the seal of the town of Davis, California. There are a total of 12 puzzles, after each of which you get rewarded with a slice of the seal as well as some knowledge about the town. </p> 
+        </div>
         <button class="playBttn">play!</button>
     </section>
 
     <main class="hidden">
         <!-- puzzle 1 -->
-        <section id="puzzle0" class="hidden">
+        <section id="puzzle0" class="layer hidden">
             <!-- left section -->
             <div>
                 <h2>Puzzle 1/12: Crossroads</h2>
@@ -115,7 +119,7 @@
                 <h2>Puzzle 3/12: Birds</h2>
                 <!-- the box behind the text -->
                 <div>
-                    <!-- connect the dots goes here -->
+                    <p>...coming soon...</p>
                 </div>
             </div>
 
@@ -124,7 +128,7 @@
                 <p>You have taken only a couple steps when you spot the hawk. The hawk sits in front of you, eyes glimmering and head tilted. In front of the hawk is a scattered collection of pebbles. After some silence, the hawk tells you to identify shape what the pebbles form. You try to step forward, but there is something preventing you from moving.</p>
                 <div id="p3form">
                     <form>
-                        <label for="bird">What bird shape is in front of the hawk?</label>
+                        <label for="bird">What is the shape?</label>
                         <input type="text" id="bird" required>
                         <input type="submit" value="continue down the path" id="s2" class="bttn">
                     </form>
@@ -163,12 +167,12 @@
                 <h2>Puzzle 5/12: Farmland</h2>
                 <!-- the box behind the text -->
                 <div>
-                    <p>To the south, without any northern companions exists the fruit that grows as a collection.(1)</p>
-                    <p>The Byzantine called what is located north starboard the “royal nut”.(3)</p>
-                    <p>Crosswise from the fruit perceived as a nut is a plant(4) from the family of Daisy that is named after Ra’s domain.(5)</p>
-                    <p>To the northwest grows the nut that is only perceived as one, but is a fruit. (4)</p>
-                    <p>Nestled between the false nut(4) and the royal nut(3) is a seed of grass that always starts brown, of which certain types transform to the color of clouds.(6)</p>                    
-                    <p>In the final corner grows the Aztec berry known to be a relative of nightshade and belladonna.(2)</p>
+                    <p>To the south, without any northern companions exists the fruit that grows as a collection (1).</p>
+                    <p>The Byzantine called what is located north starboard the “royal nut” (3).</p>
+                    <p>Crosswise from the fruit perceived as a nut is a plant (4) from the family of Daisy that is named after Ra’s domain (5).</p>
+                    <p>To the northwest grows the nut that is only perceived as one, but is a fruit (4).</p>
+                    <p>Nestled between the false nut (4) and the royal nut (3) is a seed of grass that always starts brown, of which certain types transform to the color of clouds (6).</p>                    
+                    <p>In the final corner grows the Aztec berry known to be a relative of nightshade and belladonna (2).</p>
                 </div>
             </div>
 
@@ -193,7 +197,7 @@
                 <!-- the box behind the text -->
                 <div>
                     <img src="images/alphabet.svg">
-                    <p>awypvbgkqjxz</p>
+                    <p>ypvkuqtjxz</p>
                 </div>
             </div>
 
@@ -218,7 +222,7 @@
                 <!-- the box behind the text -->
                 <div>
                     <p>🙈 and 🙉</p>
-                    <p>👁️ on 🫵🏽</p>
+                    <p>👁️ on 👆</p>
                     <p>📘👤</p>
                     <p>☯️</p>
                     <p>🌠👀</p>
@@ -263,7 +267,7 @@
                 <h2>Puzzle 8/12: Childhood</h2>
                 <!-- the box behind the text -->
                 <div>
-                    <!-- drawing space? -->
+                    <p>...coming soon...</p>
                 </div>
             </div>
 
@@ -285,7 +289,7 @@
                 <h2>Puzzle 9/12: Hunt</h2>
                 <!-- the box behind the text -->
                 <div>
-                    <img src="images/tomatoesPuzzle.png" alt="find the tomatoes">
+                    <img src="images/tomatoesPuzzle.png" alt="find the tomatoes" width="500">
                 </div>
             </div>
 
@@ -329,7 +333,7 @@
                 <h2>Puzzle 11/12: Townhall</h2>
                 <!-- the box behind the text -->
                 <div>
-                    <img>
+                    <img src="images/mapDavis.jpg" alt="map of present Davis" height="360">
                 </div>
             </div>
 
@@ -350,13 +354,13 @@
             <div>
                 <h2>Puzzle 12/12: Memory</h2>
                 <div>
-                    <!-- card memory game here -->
+                    <p>...coming soon...</p>
                 </div>
             </div>
 
             <div>                
                 <button class="hint"><a href="hints/hints.html" target="_blank" rel="noopener noreferrer"> hint</a></button>
-                <p>You find yourself seated at a tavern table. There's cards face-down on the table, and you see 10 of the hawk's face staring at you, almost following you.</p>
+                <p>You find yourself seated at a tavern table. There's cards face-down on the table, and you see 10 of the hawk's face staring at you, almost following you. Match the cards, and you are free to return home.</p>
                 <form>
                     <input type="submit" value="end of the path" id="s11" class="bttn">
                 </form>
