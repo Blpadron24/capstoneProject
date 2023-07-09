@@ -145,7 +145,7 @@
     //check answers for third puzzle
     function f3CheckAnswers(){
         var userAnswer1 = document.getElementById("bird").value.toLowerCase();
-    
+        //mini game related to identifying the bird here
         if (userAnswer1 === "hawk"){
             console.log("correct!");
             sealDesc.innerHTML = "Pacific Flyway Panels - These two panels feature important symbols to the city of Davis, including the Pacific Flyway, agriculture, the university, wetlands, and migratory birds.";
@@ -263,6 +263,8 @@
 
     //timer + game for eighth puzzle
     function f8game(){
+
+        //drawing??
         sealDesc.innerHTML = "Children’s Panel - This panel shows how Davis is a wonderful place to raise children, and yet there have been children who were excluded.";
         puzzleDesc.innerHTML = "This puzzle, named Childhood, asks you to draw childlike joy, as a way of reminding you about the simple pleasures of childhood.";
         document.getElementById("seal_container").className = "showing";
@@ -347,6 +349,8 @@
 
     //twelfth puzzle, memory game
     function f12game(){
+
+        //brenda's memory game!
     
         sealDesc.innerHTML = "Outer Ring - This features flora and fauna native to the Putah Creek region, including birds, beavers, trout, and salmon. It also shows the flow of the creek.";
         puzzleDesc.innerHTML = "This puzzle, named Memory, shows the native flora and fauna of this region as mentioned by the Patwin creation stories.";
