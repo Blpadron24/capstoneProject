@@ -310,6 +310,38 @@ section > div:last-of-type{
     text-align: center;
 }
 /* ------------------------------------------------------- */
+/* section puzzle 3 styles connect the dots*/ 
+.field{
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    gap: 20px;
+   align-items: center;
+   padding: 20px 20px 20px 20px;
+   margin: auto;
+   position: relative;
+
+}
+canvas{
+    border: solid 2px black;
+    cursor: pointer;
+    /* width: 500px; */
+    background-image: url(images/ctd.jpeg);
+    background-size:contain;
+    position: fixed;
+
+}
+.button{
+    margin-top: 420px;
+}
+
+#puzzle2 {
+    height: 615px;
+}
+#p3Sec{
+    height: 490px;
+}
+/* ------------------------------------------------------- */
 /* section puzzle 4 styles */ 
 #puzzle3 > div:first-of-type > div{
     display: flex;
@@ -412,3 +444,153 @@ section > div:last-of-type{
     margin-left: 100px;
     margin-right: 100px;
 }
+
+/* card matching game styles */
+
+#puzzleCont{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    height: 475px;
+    justify-content:flex-start
+}
+
+#puzzleCont .tries{
+    color: #C3D6C9;
+    font-size: 32px;
+    padding: 5px;
+    margin: 0;
+}
+
+
+#cardGame{
+    display: grid;
+    grid-template-columns: repeat(4,5.5rem);
+    grid-template-rows: repeat(4,5.5rem);
+    grid-gap: .5em;
+    perspective: 800px;
+
+}
+#cardGame div:last-of-type{
+    display:block;
+    height: 88px;
+}
+.card{
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: rgba(0,0,0,0.2) 0px 5px 15px;
+   
+   
+}
+.face,
+.back{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    pointer-events: none;
+}
+
+.back {
+    background: #C3D6C9;
+    backface-visibility: hidden;
+}
+
+.toggleCard{
+    transform: rotateY(180deg);
+}
+
+#puzzle11{
+    height: 600px;
+}
+
+/* drawing canvas styles */
+
+.dField{
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    height: 400px;
+    gap: 20px;
+    align-items: center;
+    padding: 20px 0 20px 0;
+    position: relative;
+    /* border: solid 2px black; */
+
+}
+
+.dField canvas{
+    border: solid 2px black;
+    cursor: pointer;
+    background-color: white;
+    background-image: none;
+    /* width: 500px; */
+    position: fixed;
+    margin-left: 200px;
+}
+
+.dTools{
+    display: flex;
+    gap: 10px;
+    display: none;
+}
+
+
+.dTools .color-field{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.color-picker{
+    display: block;
+    margin-top: 420px;
+    margin-left: 200px;
+    position: absolute;
+}
+
+#puzzle7{
+    height: 615px;
+}
+
+#p7Sec{
+    height: 490px;
+}
+
+.green{
+    margin-top: 415px;
+    margin-left: 150px;
+    position: absolute;
+    display: none;
+}
+.red{
+    margin-top: 415px;
+    margin-left: 0px;
+    position: absolute;
+    display: none;
+}
+.blue{
+    margin-top: 415px;
+    margin-left: 50px;
+    position: absolute;
+    display: none;
+}
+.yellow{
+    margin-top: 415px;
+    margin-left: 100px;
+    position: absolute;
+    display: none;
+}
+.dTools button{
+    margin-left: -100px;
+    display: none;
+}
+.pen_range{
+    margin-top: 425px;
+    margin-left: 260px;
+    position: absolute;
+    display: none;
+}
+

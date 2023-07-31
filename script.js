@@ -3,7 +3,7 @@
     "use strict";
 
     const body = document.querySelector("body");
-    const seals = ["images/sealPics/seal.png", "images/sealPics/sealP1.png", "images/sealPics/sealP2.png", "images/sealPics/sealP3.png", "images/sealPics/sealP4.png", "images/sealPics/sealP5.png", "images/sealPics/sealP6.png", "images/sealPics/sealP7.png", "images/sealPics/sealP8.png", "images/sealPics/sealP9.png", "images/sealPics/sealP10.png", "images/sealPics/sealP11.png", "images/sealPics/sealP12.png"];
+    const seals = ["images/sealPics/seal.png", "images/sealPics/sealP0.png", "images/sealPics/sealP1.png", "images/sealPics/sealP2.png", "images/sealPics/sealP3.png", "images/sealPics/sealP4.png", "images/sealPics/sealP5.png", "images/sealPics/sealP6.png", "images/sealPics/sealP7.png", "images/sealPics/sealP8.png", "images/sealPics/sealP9.png", "images/sealPics/sealP10.png", "images/sealPics/sealP11.png", "images/sealPics/sealP12.png"];
     const sealDesc = document.getElementById("s_desc");
     const puzzleDesc = document.getElementById("p_desc");
 
@@ -141,12 +141,12 @@
             alert('One or more of your answers are wrong. Try again!\n View "Hints" if needed.');
         }
     }
-
+   
     //check answers for third puzzle
     function f3CheckAnswers(){
         var userAnswer1 = document.getElementById("bird").value.toLowerCase();
     
-        if (userAnswer1 === "hawk"){
+        if (userAnswer1 === "falcon"){
             console.log("correct!");
             sealDesc.innerHTML = "Pacific Flyway Panels - These two panels feature important symbols to the city of Davis, including the Pacific Flyway, agriculture, the university, wetlands, and migratory birds.";
             puzzleDesc.innerHTML = "This puzzle, named Birds, features a Swainson Hawk, which is a breed of hawk native to the region and is important to the Wintun people.";
@@ -249,6 +249,73 @@
             document.getElementById("seal_container").className = "showing";
             document.getElementById("seal").src = seals[7];
             document.getElementById("puzzle6").className = "hidden";
+
+            console.log("it works");
+  const dCanvas = document.getElementById('dCanvas');
+  dCanvas.width = 700;
+  dCanvas.height = 400;
+  
+  let dcontext = dCanvas.getContext('2d');
+  let dstart_background_color ="rgba(255,255,255, 0)";
+  dcontext.fillStyle = dstart_background_color;
+  dcontext.fillRect(0, 0, dCanvas.width, dCanvas.height);
+  
+  
+  let ddraw_color = "black";
+  let ddraw_width = "2";
+  let dis_drawing = false;
+  
+  function change_color(element){
+      ddraw_color = element.style.background;
+  }
+  
+  dCanvas.addEventListener("touchstart", start, false);
+  dCanvas.addEventListener("touchmove", draw, false);
+  dCanvas.addEventListener("mousedown", start, false);
+  dCanvas.addEventListener("mousemove", draw, false);
+  
+  dCanvas.addEventListener("touched", stop, false);
+  dCanvas.addEventListener("mouseup", stop, false);
+  dCanvas.addEventListener("mouseout", stop, false);
+  
+  function start(event){
+      dis_drawing = true;
+      dcontext.beginPath();
+      dcontext.moveTo(event.clientX - dCanvas.offsetLeft, event.clientY - dCanvas.offsetTop);
+      event.preventDefault();
+      
+  }
+  
+  function draw(event) {
+      if( dis_drawing){
+          dcontext.lineTo(event.clientX - dCanvas.offsetLeft, event.clientY - dCanvas.offsetTop);
+          dcontext.strokeStyle = ddraw_color;
+          dcontext.lineWidth = ddraw_width;
+          dcontext.lineCap = "round";
+          dcontext.lineJoin ="round";
+          dcontext.stroke();
+      }
+      event.preventDefault();
+  }
+  
+  function stop(event){
+      if(dis_drawing){
+          dcontext.stroke();
+          dcontext.closePath();
+          dis_drawing = false;
+  
+      }
+      event.preventDefault();
+  }
+  
+  function clear_canvas(){
+      dcontext.fillStyle =start_background_color;
+      dcontext.clearRect(0, 0, dCanvas.width, dCanvas.height);
+      dcontext.fillRect(0, 0, dCanvas.width, dCanvas.height);
+  
+  }
+  
+  
 
             setTimeout(function(){
                 document.getElementById("seal_container").className = "hidden";
@@ -358,8 +425,262 @@
             document.getElementById("reward").innerHTML = "All Rewards Acquired!";
             sealDesc.innerHTML = 'Here is the full <a href="https://www.cityofdavis.org/city-hall/city-manager-s-office/arts-culture/davis-centennial-seal">centennial seal of Davis</a>, created by Susan Shelton.';
             puzzleDesc.innerHTML = "You've reached the end. Thank you for playing!";
-            document.getElementById("seal").src = seals[0];
+            document.getElementById("seal").src = seals[13];
         },5000);
     }
 
 })();
+
+ // script for puzzle 3 connect the dots
+ const canvas = document.getElementById('canvas');
+ canvas.width = 700;
+ canvas.height = 400;
+ 
+ let context = canvas.getContext('2d');
+ let start_background_color ="rgba(255,255,255, 0)";
+ context.fillStyle = start_background_color;
+ context.fillRect(0, 0, canvas.width, canvas.height);
+ 
+ 
+ let draw_color = "red";
+ let draw_width = "2";
+ let is_drawing = false;
+ 
+ canvas.addEventListener("touchstart", start, false);
+ canvas.addEventListener("touchmove", draw, false);
+ canvas.addEventListener("mousedown", start, false);
+ canvas.addEventListener("mousemove", draw, false);
+ 
+ canvas.addEventListener("touched", stop, false);
+ canvas.addEventListener("mouseup", stop, false);
+ canvas.addEventListener("mouseout", stop, false);
+ 
+ function start(event){
+     is_drawing = true;
+     context.beginPath();
+     context.moveTo(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop);
+     event.preventDefault();
+     
+ }
+ 
+ function draw(event) {
+     if( is_drawing){
+         context.lineTo(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop);
+         context.strokeStyle = draw_color;
+         context.lineWidth = draw_width;
+         context.lineCap = "round";
+         context.lineJoin ="round";
+         context.stroke();
+     }
+     event.preventDefault();
+ }
+ 
+ function stop(event){
+     if(is_drawing){
+         context.stroke();
+         context.closePath();
+         is_drawing = false;
+ 
+     }
+     event.preventDefault();
+ }
+ 
+ function clear_canvas(){
+     context.fillStyle =start_background_color;
+     context.clearRect(0, 0, canvas.width, canvas.height);
+     context.fillRect(0, 0, canvas.width, canvas.height);
+ 
+ }
+// script for memory game puzzle 12
+////////////////////////////////////////
+ const section = document.querySelector('#cardGame');
+const playerLivesCount = document.querySelector('.playerLivesCount');
+let playerLives =6;
+
+//link text
+playerLivesCount.textContent = playerLives;
+
+//Generate the data
+
+const getData = () => [
+    {imgSrc: "./images/duck.jpeg", name: "duck"},
+    {imgSrc: "./images/elk.jpeg", name: "elk"},
+    {imgSrc: "./images/falcon.jpeg", name: "falcon"},
+    {imgSrc: "./images/fish.jpeg", name: "fish"},
+    {imgSrc: "./images/pomegranate.jpeg", name: "pomegranate"},
+    {imgSrc: "./images/sunflowers.jpeg", name: "sunflowers"},
+    {imgSrc: "./images/tomatoes.jpeg", name: "tomatoes"},
+    {imgSrc: "./images/turtule.jpeg", name: "turtule"},
+    {imgSrc: "./images/duck.jpeg", name: "duck"},
+    {imgSrc: "./images/elk.jpeg", name: "elk"},
+    {imgSrc: "./images/falcon.jpeg", name: "falcon"},
+    {imgSrc: "./images/fish.jpeg", name: "fish"},
+    {imgSrc: "./images/pomegranate.jpeg", name: "pomegranate"},
+    {imgSrc: "./images/sunflowers.jpeg", name: "sunflowers"},
+    {imgSrc: "./images/tomatoes.jpeg", name: "tomatoes"},
+    {imgSrc: "./images/turtule.jpeg", name: "turtule"}
+
+];
+
+//randomize
+
+const randomize = () => {
+    const cardData = getData();
+    cardData.sort(() => Math.random() - 0.5);
+    return cardData;
+   
+};
+randomize();
+
+//card generator function
+const cardGenerator = () =>{
+    const cardData = randomize();
+    //generate html
+
+cardData.forEach((item, index) => {
+    const card = document.createElement('div');
+    const face = document.createElement('img');
+    const back = document.createElement('div');
+    card.classList ="card";
+    face.classList ="face";
+    back.classList ="back";
+    
+    //attach info to cards
+    face.src = item.imgSrc;
+    card.setAttribute('name', item.name);
+    //attach the cards to the section
+    section.appendChild(card);
+    card.appendChild(face);
+    card.appendChild(back);
+
+    card.addEventListener('click', (e)=> {
+        card.classList.toggle('toggleCard');
+        checkCards(e);
+    });
+});
+};
+//check cards
+const checkCards = (e) =>{
+    const clickedCard = e.target;
+    clickedCard.classList.add('flipped');
+    const flippedCards = document.querySelectorAll('.flipped');
+    const toggleCard = document.querySelectorAll('.toggleCard');
+   
+    //logic
+    if (flippedCards.length === 2){
+       if ( flippedCards[0].getAttribute('name') === flippedCards[1].getAttribute('name')
+    ){
+        console.log('match');
+        flippedCards.forEach(card =>{
+            card.classList.remove('flipped');
+            card.style.pointerEvents = 'none';
+        })
+       } else{
+           console.log('wrong');
+           flippedCards.forEach( card => {
+               card.classList.remove('flipped');
+               setTimeout(() => card.classList.remove('toggleCard'), 1500);
+           });
+           playerLives--;
+           playerLivesCount.textContent = playerLives;
+           if (playerLives === 0){
+               restart("try again");
+           }
+       }
+    }
+// run a check to see if game was won
+    if(toggleCard.length === 16){
+        alert("you won");
+    }
+};
+//restart
+const restart = (text) => {
+    let cardData = randomize();
+    let faces = document.querySelectorAll('.face');
+    let cards = document.querySelectorAll('.card');
+    section.style.pointerEvents = "none";
+    cardData.forEach((item, index)=>{
+        cards[index].classList.remove('toggleCard');
+        //randomize
+       setTimeout(()=>{
+        cards[index].style.pointerEvents = 'all';
+        faces[index].src = item.imgSrc;
+        cards[index].setAttribute('name', item.name);
+        section.style.pointerEvents = "all";
+       }, 1000);
+    });
+    playerLives = 6;
+    playerLivesCount.textContent = playerLives;
+    setTimeout(()=> window.alert(text), 100);
+};
+cardGenerator();
+
+
+// painting app
+
+// console.log("it works");
+//   const dCanvas = document.getElementById('dCanvas');
+//   dCanvas.width = 700;
+//   dCanvas.height = 400;
+  
+//   let dcontext = dCanvas.getContext('2d');
+//   let dstart_background_color ="rgba(255,255,255, 0)";
+//   dcontext.fillStyle = dstart_background_color;
+//   dcontext.fillRect(0, 0, dCanvas.width, dCanvas.height);
+  
+  
+//   let ddraw_color = "black";
+//   let ddraw_width = "2";
+//   let dis_drawing = false;
+  
+//   function change_color(element){
+//       ddraw_color = element.style.background;
+//   }
+  
+//   dCanvas.addEventListener("touchstart", start, false);
+//   dCanvas.addEventListener("touchmove", draw, false);
+//   dCanvas.addEventListener("mousedown", start, false);
+//   dCanvas.addEventListener("mousemove", draw, false);
+  
+//   dCanvas.addEventListener("touched", stop, false);
+//   dCanvas.addEventListener("mouseup", stop, false);
+//   dCanvas.addEventListener("mouseout", stop, false);
+  
+//   function start(event){
+//       dis_drawing = true;
+//       dcontext.beginPath();
+//       dcontext.moveTo(event.clientX - dCanvas.offsetLeft, event.clientY - dCanvas.offsetTop);
+//       event.preventDefault();
+      
+//   }
+  
+//   function draw(event) {
+//       if( dis_drawing){
+//           dcontext.lineTo(event.clientX - dCanvas.offsetLeft, event.clientY - dCanvas.offsetTop);
+//           dcontext.strokeStyle = ddraw_color;
+//           dcontext.lineWidth = ddraw_width;
+//           dcontext.lineCap = "round";
+//           dcontext.lineJoin ="round";
+//           dcontext.stroke();
+//       }
+//       event.preventDefault();
+//   }
+  
+//   function stop(event){
+//       if(dis_drawing){
+//           dcontext.stroke();
+//           dcontext.closePath();
+//           dis_drawing = false;
+  
+//       }
+//       event.preventDefault();
+//   }
+  
+//   function clear_canvas(){
+//       dcontext.fillStyle =start_background_color;
+//       dcontext.clearRect(0, 0, dCanvas.width, dCanvas.height);
+//       dcontext.fillRect(0, 0, dCanvas.width, dCanvas.height);
+  
+//   }
+  
+  

@@ -118,8 +118,13 @@
             <div>
                 <h2>Puzzle 3/12: Birds</h2>
                 <!-- the box behind the text -->
-                <div>
-                    <p>...coming soon...</p>
+                <div id="p3Sec">
+                    <div class="field">
+                        <canvas id="canvas"></canvas>
+                        <div class="tools">
+                            <button onclick="clear_canvas()" type="button" class="button">Clear</button>
+                        </div>
+                </div>
                 </div>
             </div>
 
@@ -263,14 +268,24 @@
         <section id="puzzle7" class="layer hidden">
 
             <!-- left section -->   
-            <div>
+            <div >
                 <h2>Puzzle 8/12: Childhood</h2>
                 <!-- the box behind the text -->
-                <div>
-                    <p>...coming soon...</p>
+                <div id="p7Sec">
+                    <div class="dField">
+                        <canvas id="dCanvas"></canvas>
+                        <div class="dTools">
+                            <button onclick="clear_canvas()" type="button" class="button">Clear</button>
+                            <div onclick="change_color(this)" class="color-field red" style="background: red;"></div>
+                            <div onclick="change_color(this)" class="color-field blue" style="background: blue;"></div>
+                            <div onclick="change_color(this)" class="color-field yellow" style="background: yellow"></div>
+                            <div onclick="change_color(this)" class="color-field green" style="background: green;"></div>
+                            <input oninput="ddraw_color = this.value" type="color" class="color-picker">
+                            <input oninput="ddraw_width= this.value" type="range" min="1" max="100" class="pen_range">
+                        </div>
                 </div>
             </div>
-
+        </div>
             <div>
                 <button class="hint"><a href="hints/hints.html" target="_blank" rel="noopener noreferrer"> hint</a></button>
                 <p>The paved path has the occasional cobblestone. The hawk drops in front of you a scroll and a curious writing utensil. While you gather what it dropped, it stares at you. "Sit, and draw childlike joy." Taken aback, you look at the hawk. But the hawk and the path in front of you has gone.</p>
@@ -289,7 +304,7 @@
                 <h2>Puzzle 9/12: Hunt</h2>
                 <!-- the box behind the text -->
                 <div>
-                    <img src="images/tomatoesPuzzle.png" alt="find the tomatoes" width="500">
+                    <img src="images/tomatoesPuzzle.png" alt="find the tomatoes" width="800">
                 </div>
             </div>
 
@@ -353,8 +368,9 @@
             <!-- left section -->   
             <div>
                 <h2>Puzzle 12/12: Memory</h2>
-                <div>
-                    <p>...coming soon...</p>
+                <div id="puzzleCont">
+                    <h4 class="tries">Tries: <span class="playerLivesCount"></span></h4>
+                    <section id="cardGame"></section>
                 </div>
             </div>
 
@@ -369,7 +385,7 @@
 
         <article id="seal_container" class="hidden">
             <h2 id="reward">Reward!</h2>
-            <img id="seal" src="images/sealPics/seal.png" height="200">
+            <img id="seal" src="images/sealPics/sealP0.png" height="200">
             <p id="s_desc">Central Ring - This portion of the seal represents the convergence of geographical and infrastructural elements that are at the core of the founding and development as a city.</p>
             <p id="p_desc">This puzzle, named Crossroads, represents the convergence mentioned in the description above. Interpreted quite literally, the convergence was represented as a crossword.</p>
         </article>
